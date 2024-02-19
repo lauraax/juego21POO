@@ -19,7 +19,7 @@ class Mazo:
         else:
             self.cartas=[Carta(u,p) 
                          for u in ['A','J','Q','K']+[str(x) for x in range(2,11)] 
-                         for p in ['picas', 'treboles','corazones','diamantes']]
+                         for p in ["\U00002663",  "\U00002666", "\U00002665", "\U00002660"]]
             random.shuffle(self.cartas)
     
     def dar_valor(self):
@@ -38,8 +38,7 @@ class Mazo:
 if __name__=='__main__':
     m = Mazo(True)
     j = Mazo()
-    m.agregar_carta(j.dar_carta())
-    m.agregar_carta(j.dar_carta())
-    for c in m.cartas:
-        print(c.mostrar())
-    print (m.dar_valor())
+   
+    for j in m.cartas:
+        print(j.mostrar())
+    print (j.dar_valor())
