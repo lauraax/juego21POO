@@ -19,6 +19,8 @@ class Mazo:
             self.cartas=[Carta(u,p) 
                          for u in ['A','J','Q','K']+[str(x) for x in range(2,11)] 
                          for p in ['picas', 'treboles','corazones','diamantes']]
+    
+    
 
     def dar_valor(self):
         valor = 0
