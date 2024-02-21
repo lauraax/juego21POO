@@ -26,19 +26,37 @@ class Mazo:
         valor = 0
         for c in self.cartas:
             valor += c.dar_valor()
+        if self.tiene_as() and valor <= 11:
+            valor +=10
         return valor
+    
+    def tiene_as(self):
+        for c in self.cartas:
+            print(c.mostrar())
+            if c.valor=='A':
+                return True
+            return False
     
     def dar_carta(self):
         return self.cartas.pop()
 
     def agregar_carta(self,carta):
         self.cartas.append(carta)
+    
+    def mostrar_cartas(self,todas=False):
+        if todas:
+            print(self.cartas[0].mostrar())
+        else: 
+            print("* de *")
+        for c in self.cartas[1:]:
+            print(c.mostrar())
 
 
 if __name__=='__main__':
     m = Mazo(True)
     j = Mazo()
-   
-    for j in m.cartas:
-        print(j.mostrar())
-    print (j.dar_valor())
+    m.agregar_carta(j.dar_carta())
+    #m.agregar_carta(j.dar_carta())
+    m.agregar_carta(Carta('A','picas'))
+    m.mostrar_cartas()
+    print (m.dar_valor())
