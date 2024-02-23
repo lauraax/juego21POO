@@ -8,12 +8,13 @@ juego.mostrar_juego()
 
 
 while juego.jugador.dar_valor()<=21:
-    pedir=str(input("¿Desea agregar otra carta?: (1 para SI / 2 para NO ) \n"))
+    pedir = str(input("¿Desea agregar otra carta?: (1 para SI / 2 para NO ) \n"))
     if pedir == '1':
-         juego.jugador.agregar_carta(juego.mazo.dar_carta())
+          juego.jugador.agregar_carta(juego.mazo.dar_carta())
     else:
          break
-    
+   
+
     
 print (juego.jugador.dar_valor())
-print(juego.mostrar_juego())
+juego.mostrar_juego()

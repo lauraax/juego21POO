@@ -13,9 +13,9 @@ class Juego:
         self.jugador.agregar_carta(self.mazo.dar_carta())
     
     def mostrar_juego(self):
-        print("Tu mazo: ")
-        self.jugador.mostrar_cartas(todas=True)
-        print("Mazo de la casa: ")
+        print("\n Tu mazo: ")
+        self.jugador.mostrar_cartas(True)
+        print("\n Mazo de la casa: ")
         self.casa.mostrar_cartas()
     
     

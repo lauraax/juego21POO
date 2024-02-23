@@ -26,16 +26,15 @@ class Mazo:
         valor = 0
         for c in self.cartas:
             valor += c.dar_valor()
-        if self.tiene_as() and valor <= 11:
+        if self.tiene_as() and valor < 11:
             valor +=10
         return valor
     
     def tiene_as(self):
         for c in self.cartas:
-            print(c.mostrar())
             if c.valor=='A':
                 return True
-            return False
+        return False
     
     def dar_carta(self):
         return self.cartas.pop()
