@@ -47,8 +47,8 @@ class Mazo:
             print(self.cartas[0].mostrar())
         else: 
             print("* de *")
-        for c in self.cartas[1:]:
-            print(c.mostrar())
+        #for c in self.cartas[1:]:
+         #   print(c.mostrar())
 
 
 if __name__=='__main__':
