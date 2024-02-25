@@ -12,6 +12,7 @@ while juego.jugador.dar_valor() <= 21:
     pedir = str(input("¿Desea agregar otra carta?: (1 para SI / 2 para NO ) \n"))
     if pedir == '1':
           juego.jugador.agregar_carta(juego.mazo.dar_carta())
+          juego.mostrar_juego_jugador()
     else:
          break
     
@@ -23,7 +24,7 @@ else:
             juego.casa.agregar_carta(juego.mazo.dar_carta())
 
       juego.mostrar_juego_jugador()
-      juego.mostrar_juego_casa(mostrar=True)
+      juego.mostrar_juego_casa(True)
 
       valor_mano_jugador = juego.jugador.dar_valor()
       valor_mano_casa = juego.casa.dar_valor()
